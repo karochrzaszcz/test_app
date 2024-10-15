@@ -58,4 +58,4 @@ coverage_report/
 *.chopper.dart
 
 # secret.config
-secret.*.config
+secret.config

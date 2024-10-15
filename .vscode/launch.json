@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "[Android] Beta test_app",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_beta.dart",
+            "args": [
+                "--dart-define-from-file",
+                "secret.config",
+            ]
+        },
+        {
+            "name": "[Android] Beta test_app (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "program": "lib/main_beta.dart",
+            "args": [
+                "--dart-define-from-file",
+                "secret.config",
+            ]
+        },
+        {
+            "name": "[iOS] Beta test_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "program": "lib/main_beta.dart",
+            "args": [
+                "--dart-define-from-file",
+                "secret.config",
+            ],
+        },
+        {
+            "name": "[iOS] Beta test_app (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "program": "lib/main_beta.dart",
+            "args": [
+                "--dart-define-from-file",
+                "secret.config",
+            ],
+        },
+    ]
+}

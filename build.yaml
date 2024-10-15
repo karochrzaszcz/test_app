@@ -1,0 +1,25 @@
+targets:
+  $default:
+    builders:
+      json_serializable:json_serializable:
+        options:
+          explicit_to_json: true
+        generate_for:
+          - lib/infrastructure/**.dart
+          - lib/domain/**.f.dart
+      chopper_generator:chopper_generator:
+        generate_for:
+          - lib/infrastructure/**data_source**.dart
+      freezed:freezed:
+        options:
+          map:
+            map: false
+            map_or_null: false
+            maybe_map: false
+          when:
+            when: false
+            when_or_null: false
+            maybe_when: false
+        generate_for:
+          - lib/**.f.dart
+          - lib/**.gen.dart

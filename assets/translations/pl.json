@@ -1,0 +1,13 @@
+{
+    "start": {
+        "title": "Start",
+        "currency_cta": "Zobacz dostępne waluty"
+    },
+    "currency": {
+        "title": "Waluty",
+        "no_data": "Brak walut do wyświetlenia"
+    },
+    "currency_detail": {
+        "title": "Szczegóły waluty"
+    }
+}
