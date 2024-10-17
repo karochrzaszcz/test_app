@@ -1,5 +1,4 @@
 import 'package:injectable/injectable.dart';
-import 'package:test_app/domain/currency/enum/currency_type.dart';
 import 'package:test_app/domain/currency/model/currency.f.dart';
 import 'package:test_app/domain/currency/repository/currency_repository.dart';
 import 'package:test_app/infrastructure/currency/data_source/currency_data_source.dart';
@@ -16,8 +15,8 @@ class CurrencyRepositoryImpl implements CurrencyRepository {
   final CurrencyMapper currencyMapper;
 
   @override
-  Future<List<Currency>> getCurrencies(CurrencyType type) async {
-    final response = await dataSource.getCurrencyList(type: type.name);
+  Future<List<Currency>> getCurrencies() async {
+    final response = await dataSource.getCurrencyList();
     if (response.isSuccessful) {
       return response.body?.response
               .map((dto) => currencyMapper.fromDto(dto))

@@ -2,7 +2,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooked_bloc/hooked_bloc.dart';
-import 'package:test_app/domain/currency/enum/currency_type.dart';
 import 'package:test_app/presentation/basic_content/loading_content.dart';
 import 'package:test_app/presentation/basic_content/no_data_content.dart';
 import 'package:test_app/presentation/basic_widget/vertical_spacer.dart';
@@ -13,7 +12,10 @@ import 'package:test_app/presentation/router/app_router.dart';
 import 'package:test_app/presentation/style/app_spacings.dart';
 
 class CurrencyPage extends HookWidget {
-  const CurrencyPage({super.key});
+  const CurrencyPage({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
     final cubit = useBloc<CurrencyCubit>();
@@ -21,7 +23,7 @@ class CurrencyPage extends HookWidget {
 
     useEffect(
       () {
-        cubit.loadData(type: CurrencyType.all);
+        cubit.loadData();
         return null;
       },
       [cubit],

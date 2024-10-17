@@ -1,7 +1,7 @@
 {
     "start": {
         "title": "Start",
-        "currency_cta": "Zobacz dostępne waluty"
+        "all_currencies_cta": "Zobacz dostępne waluty ->"
     },
     "currency": {
         "title": "Waluty",

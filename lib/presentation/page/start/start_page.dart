@@ -16,7 +16,7 @@ class StartPage extends StatelessWidget {
         children: [
           MaterialButton(
             onPressed: () => const CurrencyRoute().go(context),
-            child: Text(tr(LocaleKeys.start_currency_cta)),
+            child: Text(tr(LocaleKeys.start_all_currencies_cta)),
           ),
         ],
       ),

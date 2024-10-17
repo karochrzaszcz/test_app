@@ -13,7 +13,5 @@ abstract class CurrencyDataSource extends ChopperService {
       _$CurrencyDataSource(client);
 
   @Get(path: '/v1/currencies')
-  Future<Response<CurrencyResponseDto>> getCurrencyList({
-    @Query('type') required String type,
-  });
+  Future<Response<CurrencyResponseDto>> getCurrencyList();
 }
